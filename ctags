@@ -1,0 +1,14 @@
+-f .php.tags
+-R
+--languages=php
+--php-kinds=cif
+--exclude=.git/*
+--exclude=app/*
+--exclude=bin/*
+--exclude=web/*
+--exclude=tests/*
+--exclude=*/Test/*
+--exclude=*/Tests/*
+--exclude=*test*
+--exclude=*Form/Type*
+--exclude=vendor/*/vendor

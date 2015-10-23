@@ -1,0 +1,17 @@
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+	br = branch
+	df = diff
+	pr = pull --rebase --stat
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all
+[color]
+	ui = always
+[user]
+	name =
+	mail =
+	email =
+[core]
+    editor = vim
+    excludesfile = ~/.gitignore

@@ -1,0 +1,78 @@
+set nocompatible        " Must be first line
+set background=dark     " Assume a dark background
+
+" The next three lines ensure that the ~/.vim/bundle/ system works
+filetype off
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
+" Bundles {
+
+" Vim Bundles manager
+Bundle 'gmarik/vundle'
+
+" Vim color theme
+Bundle 'tomasr/molokai'
+
+" Nerdtree, file explorer
+Bundle 'scrooloose/nerdtree'
+
+" Vim surround, try cs'" 
+Bundle 'tpope/vim-surround'
+
+" Ctrlp file/buffer finder
+Bundle 'kien/ctrlp.vim'
+
+" Vim multiple cursors with C-n
+Bundle 'terryma/vim-multiple-cursors'
+
+" Powerful vim command bar
+Bundle 'bling/vim-airline'
+
+" Prints buffers in command bar
+Bundle 'bling/vim-bufferline'
+
+" Undo tree
+Bundle 'mbbill/undotree'
+
+" indent colored lines
+Bundle 'nathanaelkane/vim-indent-guides'
+
+" Marks added / removed lines
+Bundle 'mhinz/vim-signify'
+
+" Syntax check in vim
+Bundle 'scrooloose/syntastic'
+Bundle 'myint/syntastic-extras'
+
+" Vim git plugin
+Bundle 'tpope/vim-fugitive'
+
+" Tabular makes align tab by regex
+Bundle 'godlygeek/tabular'
+
+" Required by pdv
+Bundle 'tobyS/vmustache'
+
+" PHP Documentor, with snippets support
+Bundle 'tobyS/pdv'
+
+" Easy motion <leader><leader>motion :)
+Bundle 'Lokaltog/vim-easymotion'
+
+
+" Snippets and autocomplete
+Bundle 'Shougo/neocomplete'
+Bundle 'Shougo/neosnippet'
+Bundle 'j-arnaiz/snippets'
+
+Bundle 'j-arnaiz/php_getset.vim'
+
+Bundle 'vim-scripts/TeX-9'
+
+Bundle 'majutsushi/tagbar'
+
+Bundle 'adoy/vim-php-refactoring-toolbox'
+
+"To be tested
+"Bundle 'xolox/vim-misc'
+"Bundle 'xolox/vim-easytags'
