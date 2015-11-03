@@ -2,11 +2,11 @@
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd ${SCRIPT_DIR}/..
 
-./installPowerlineFonts.sh
-./installComposer.sh
+./scripts/installPowerlineFonts.sh
+./scripts/installComposer.sh
 
 sudo apt-get update
-sudo apt-get install git tmux zsh fortune autojump gvim
+sudo apt-get install git tmux zsh fortune autojump vim-gtk
 
 # Install oh-my-zsh
 sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"

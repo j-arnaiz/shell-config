@@ -49,7 +49,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git autojump bgnotify bower bundler capistrano catimg chucknorris colored-man-pages colorize command-not-found composer common-aliases debian dircycle dirhistory encode64 extract fancy-ctrl-z fasd frontend-search gem jsontools npm pass phing rails redis-cli sudo symfony2 urltools vagrant web-search wd)
+plugins=(git autojump bgnotify bower bundler capistrano catimg chucknorris colored-man-pages colorize command-not-found composer common-aliases debian dircycle dirhistory encode64 extract fancy-ctrl-z fasd frontend-search gem jsontools npm pass phing rails redis-cli sudo symfony2 urltools vagrant web-search wd docker docker-compose)
 
 # User configuration
 
