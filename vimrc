@@ -1,4 +1,13 @@
 set nocompatible        " Must be first line
+set t_Co=256
+if &term =~ '256color'
+    " disable Background Color Erase (BCE) so that color schemes
+    " render properly when inside 256-color tmux and GNU screen.
+    " see also http://snk.tuxfamily.org/log/vim-256color-bce.html
+    set t_ut=
+endif
+
+
 set background=dark     " Assume a dark background
 
 let mapleader = ','
@@ -210,6 +219,8 @@ command! -bang Qa qa<bang>
     smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
     \ "\<Plug>(neosnippet_expand_or_jump)"
     \: "\<TAB>"
+
+    autocmd BufNewFile,BufRead *.html.erb set filetype=html.eruby
 
     " For snippet_complete marker.
     if has('conceal')

@@ -120,8 +120,6 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 umask 0002
-export TERM=xterm-256color
-
 
 PATH=$PATH:$HOME/.rvm/bin:$HOME/.composer/vendor/bin # Add RVM to PATH for scripting
 
