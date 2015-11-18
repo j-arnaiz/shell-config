@@ -6,7 +6,7 @@ cd ${SCRIPT_DIR}/..
 ./scripts/installComposer.sh
 
 sudo apt-get update
-sudo apt-get install git tmux zsh fortune autojump vim-gtk
+sudo apt-get install git tmux zsh fortune autojump vim-gtk silversearcher-ag
 
 # Install oh-my-zsh
 sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"

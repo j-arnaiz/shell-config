@@ -71,7 +71,11 @@ Bundle 'vim-scripts/TeX-9'
 
 Bundle 'majutsushi/tagbar'
 
-Bundle 'adoy/vim-php-refactoring-toolbox'
+"Bundle 'adoy/vim-php-refactoring-toolbox'
+
+Bundle 'editorconfig/editorconfig-vim'
+
+Bundle 'rking/ag.vim'
 
 "To be tested
 "Bundle 'xolox/vim-misc'
