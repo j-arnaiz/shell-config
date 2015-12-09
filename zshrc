@@ -53,7 +53,6 @@ plugins=(git autojump bgnotify bower bundler capistrano catimg colored-man-pages
 
 # User configuration
 
-# export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$HOME/.rvm/bin:$HOME/.composer/vendor/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh

@@ -121,7 +121,5 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 umask 0002
 
-PATH=$PATH:$HOME/.rvm/bin:$HOME/.composer/vendor/bin # Add RVM to PATH for scripting
-
 set -o vi
 export EDITOR=vim
