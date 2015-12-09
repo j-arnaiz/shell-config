@@ -3,13 +3,10 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd ${SCRIPT_DIR}/..
 
 ./scripts/installPowerlineFonts.sh
-./scripts/installComposer.sh
+#./scripts/installComposer.sh
 
 sudo apt-get update
-sudo apt-get install git tmux zsh fortune autojump vim-gtk silversearcher-ag
-
-# Install oh-my-zsh
-sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+sudo apt-get install git tmux zsh autojump silversearcher-ag octave
 
 # Installing dot files
 files=("bash_aliases" "bash_profile" "bash_colors" "bashrc" "vimrc" "vimrc.bundles" "gitconfig" "tmux.conf" "ctags" "phpmd.xml" "gitignore" "zshrc")

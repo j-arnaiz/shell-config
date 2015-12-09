@@ -49,15 +49,14 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git autojump bgnotify bower bundler capistrano catimg chucknorris colored-man-pages colorize command-not-found composer common-aliases debian dircycle dirhistory encode64 extract fancy-ctrl-z fasd frontend-search gem jsontools npm pass phing rails redis-cli sudo symfony2 urltools vagrant web-search wd docker docker-compose)
+plugins=(git autojump bgnotify bower bundler capistrano catimg colored-man-pages colorize command-not-found composer common-aliases debian dircycle dirhistory encode64 extract fancy-ctrl-z fasd frontend-search gem jsontools npm pass phing rails redis-cli sudo symfony2 urltools vagrant web-search wd docker docker-compose)
 
 # User configuration
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$HOME/.rvm/bin:$HOME/.composer/vendor/bin"
+# export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$HOME/.rvm/bin:$HOME/.composer/vendor/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
-source ~/.rvm/scripts/rvm
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -83,4 +82,6 @@ source ~/.rvm/scripts/rvm
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-eval $(thefuck --alias)
+# eval $(thefuck --alias)
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
