@@ -301,6 +301,11 @@ command! -bang Qa qa<bang>
     nmap <Leader>j <C-w>j
     nmap <Leader>k <C-w>k
 
+    nmap <Space>l <C-w>l
+    nmap <Space>h <C-w>h
+    nmap <Space>j <C-w>j
+    nmap <Space>k <C-w>k
+
 
     "open buffer previous
     nmap <Leader>bh :bp<CR>
