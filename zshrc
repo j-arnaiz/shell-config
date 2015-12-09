@@ -82,5 +82,3 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # eval $(thefuck --alias)
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
