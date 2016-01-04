@@ -123,6 +123,7 @@ command! -bang Qa qa<bang>
     let g:syntastic_php_phpmd_post_args = "~/.phpmd.xml"
     let g:syntastic_error_symbol = "✗"
     let g:syntastic_warning_symbol = "⚠"
+    let g:syntastic_ruby_checkers = ['mri', 'rubocop']
 " }
 
 " Tabularize {

@@ -11,7 +11,7 @@ fi
 
 if [[ -f ~/.zshrc ]]; then
     echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc
-    echo 'eval "$(rbenv init -)"' >> ~/.rshrc
+    echo 'eval "$(rbenv init -)"' >> ~/.zshrc
 else
     echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
     echo 'eval "$(rbenv init -)"' >> ~/.bashrc
