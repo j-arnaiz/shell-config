@@ -9,9 +9,9 @@
 [color]
 	ui = always
 [user]
-	name =
-	mail =
-	email =
+	name = Jesus Arnaiz
+	mail = j.arnaiz@gmail.com
+	email = j.arnaiz@gmail.com
 [core]
     editor = vim
     excludesfile = ~/.gitignore
