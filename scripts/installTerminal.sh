@@ -25,3 +25,5 @@ read gitemail
 
 sed -i "s/%name%/$gitname/g" ~/.gitconfig
 sed -i "s/%email%/$gitemail/g" ~/.gitconfig
+
+git clone https://github.com/j-arnaiz/common-aliases ~/.oh-my-zsh/custom/plugins/common-aliases
