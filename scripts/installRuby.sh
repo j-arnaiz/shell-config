@@ -1,5 +1,5 @@
 #!/bin/bash
-rubyVersion=2.2.3
+rubyVersion=2.3.0
 
 set -e
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"

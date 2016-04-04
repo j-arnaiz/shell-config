@@ -9,9 +9,9 @@
 [color]
 	ui = always
 [user]
-	name =
-	mail =
-	email =
+	name = %name%
+	mail = %email%
+	email = %email%
 [core]
     editor = vim
     excludesfile = ~/.gitignore
