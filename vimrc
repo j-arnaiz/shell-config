@@ -225,8 +225,9 @@ command! -bang Qa qa<bang>
 
     " For snippet_complete marker.
     if has('conceal')
-      set conceallevel=2 concealcursor=i
+      set conceallevel=0 concealcursor=i
     endif
+    set conceallevel=0
 "}
 
 " PDV (php doc) {
@@ -297,11 +298,6 @@ command! -bang Qa qa<bang>
     " Remove white spaces
     nmap <Leader>w :call StripTrailingWhitespace()<CR>
 
-    nmap <Leader>l <C-w>l
-    nmap <Leader>h <C-w>h
-    nmap <Leader>j <C-w>j
-    nmap <Leader>k <C-w>k
-
     nmap <Space>l <C-w>l
     nmap <Space>h <C-w>h
     nmap <Space>j <C-w>j
@@ -322,6 +318,8 @@ command! -bang Qa qa<bang>
     map <Leader>T <C-W>}
 
     nmap <Leader>bc :w<CR>:bd<CR>
+
+    nmap <Leader>j :%!python -m json.tool<CR>
 "}
 
 " TagbarToggle {

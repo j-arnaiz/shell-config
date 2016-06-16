@@ -84,5 +84,8 @@ source $ZSH/oh-my-zsh.sh
 # eval $(thefuck --alias)
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+alias wallsync='rsync ~/.config/variety/Favorites/* /media/jesus/Data/Users/JArna/Pictures/Wallpapers'
 alias docker-rm='docker ps -aq | xargs docker rm'
 alias docker-rmi='docker images -q | xargs docker rm'
+alias tm='tmux attach'
+alias gbdm='git branch --no-color --merged | command grep -vE "^(\*|\s*master\s*$|\s*develop\s*$)" | command xargs -n 1 git branch -d'
