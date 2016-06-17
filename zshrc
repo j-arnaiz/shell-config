@@ -83,6 +83,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # eval $(thefuck --alias)
 export PATH="$HOME/.rbenv/bin:$PATH"
+export ANSIBLE_NOCOWS=1
 eval "$(rbenv init -)"
 alias wallsync='rsync ~/.config/variety/Favorites/* /media/jesus/Data/Users/JArna/Pictures/Wallpapers'
 alias docker-rm='docker ps -aq | xargs docker rm'

@@ -78,6 +78,8 @@ set splitbelow                  " Puts new split windows to the bottom of the cu
 set matchpairs+=<:>             " Match, to be used with %
 set pastetoggle=<F12>           " pastetoggle (sane indentation on pastes)
 set comments=sl:/*,mb:*,elx:*/  " auto format comment blocks
+:let loaded_matchparen = 0
+
 "autocmd BufNewFile,BufRead *.html.twig set filetype=html.twig
 autocmd BufNewFile,BufRead *.handlebars set filetype=html.twig
 command! -bang -nargs=* -complete=file E e<bang> <args>
