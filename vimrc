@@ -117,7 +117,8 @@ command! -bang Qa qa<bang>
     let g:syntastic_gitcommit_checkers = ['language_check']
     let g:syntastic_svn_checkers = ['language_check']
     let g:syntastic_yaml_checkers = ['pyyaml']
-    let g:syntastic_javascript_checkers = ['json_tool']
+    let g:syntastic_javascript_checkers = ['eslint']
+    let g:syntastic_javascript_eslint_exec = '/home/jesus/Workspace/samyroad/admin-web/node_modules/.bin/eslint'
     let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
     let g:syntastic_php_phpcs_exec = "/home/jesus/.composer/vendor/bin/phpcs"
     let g:syntastic_php_phpcs_args = "--standard=/home/jesus/.composer/vendor/m6web/symfony2-coding-standard/Symfony2 --report=csv"
@@ -340,6 +341,10 @@ command! -bang Qa qa<bang>
     \'compiler': 'pdflatex',
     \'leader': ','
     \}
+" }
+
+" JSX {
+   let g:jsx_ext_required = 0
 " }
 
 " Init directories {

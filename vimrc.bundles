@@ -27,6 +27,7 @@ Bundle 'terryma/vim-multiple-cursors'
 
 " Powerful vim command bar
 Bundle 'bling/vim-airline'
+Bundle 'vim-airline/vim-airline-themes'
 
 " Prints buffers in command bar
 Bundle 'bling/vim-bufferline'
@@ -76,6 +77,9 @@ Bundle 'majutsushi/tagbar'
 Bundle 'editorconfig/editorconfig-vim'
 
 Bundle 'rking/ag.vim'
+
+Bundle 'mxw/vim-jsx'
+Bundle 'pangloss/vim-javascript'
 
 "To be tested
 "Bundle 'xolox/vim-misc'
