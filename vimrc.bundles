@@ -84,3 +84,4 @@ Bundle 'pangloss/vim-javascript'
 "To be tested
 "Bundle 'xolox/vim-misc'
 "Bundle 'xolox/vim-easytags'
+Bundle 'christoomey/vim-tmux-navigator'
