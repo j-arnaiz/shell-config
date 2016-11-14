@@ -4,5 +4,5 @@ echo "deb https://apt.dockerproject.org/repo ubuntu-wily main" | sudo tee /etc/a
 sudo apt-get update
 sudo apt-get install -y linux-image-extra-$(uname -r) curl docker-engine
 sudo usermod -aG docker `whoami`
-curl -L https://github.com/docker/compose/releases/download/1.5.2/docker-compose-`uname -s`-`uname -m` | sudo tee /usr/local/bin/docker-compose > /dev/null
-sudo chmox +x /usr/local/bin/docker-compose
+curl -L https://github.com/docker/compose/releases/download/1.8.1/docker-compose-`uname -s`-`uname -m` | sudo tee /usr/local/bin/docker-compose > /dev/null
+sudo chmod +x /usr/local/bin/docker-compose

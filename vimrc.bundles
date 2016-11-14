@@ -16,6 +16,9 @@ Bundle 'tomasr/molokai'
 " Nerdtree, file explorer
 Bundle 'scrooloose/nerdtree'
 
+" Comment Uncomment lines
+Bundle 'tpope/vim-commentary'
+
 " Vim surround, try cs'" 
 Bundle 'tpope/vim-surround'
 
@@ -28,9 +31,6 @@ Bundle 'terryma/vim-multiple-cursors'
 " Powerful vim command bar
 Bundle 'bling/vim-airline'
 Bundle 'vim-airline/vim-airline-themes'
-
-" Prints buffers in command bar
-Bundle 'bling/vim-bufferline'
 
 " Undo tree
 Bundle 'mbbill/undotree'
@@ -51,37 +51,27 @@ Bundle 'tpope/vim-fugitive'
 " Tabular makes align tab by regex
 Bundle 'godlygeek/tabular'
 
-" Required by pdv
-Bundle 'tobyS/vmustache'
-
-" PHP Documentor, with snippets support
-Bundle 'tobyS/pdv'
-
 " Easy motion <leader><leader>motion :)
 Bundle 'Lokaltog/vim-easymotion'
 
-
 " Snippets and autocomplete
-Bundle 'Shougo/neocomplete'
-Bundle 'Shougo/neosnippet'
-Bundle 'j-arnaiz/snippets'
+Bundle 'SirVer/ultisnips'
+Bundle 'honza/vim-snippets'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'ervandew/supertab'
 
-Bundle 'j-arnaiz/php_getset.vim'
+" Code searching tool
+Bundle 'mileszs/ack.vim'
 
-Bundle 'vim-scripts/TeX-9'
+" Tmux - vim integration
+Bundle 'christoomey/vim-tmux-navigator'
 
-Bundle 'majutsushi/tagbar'
-
-"Bundle 'adoy/vim-php-refactoring-toolbox'
-
+" Universal config for editors
 Bundle 'editorconfig/editorconfig-vim'
 
-Bundle 'rking/ag.vim'
+" EasyClip for easy clipboard manage
+Bundle 'tpope/vim-repeat'
+Bundle 'svermeulen/vim-easyclip'
 
 Bundle 'mxw/vim-jsx'
 Bundle 'pangloss/vim-javascript'
-
-"To be tested
-"Bundle 'xolox/vim-misc'
-"Bundle 'xolox/vim-easytags'
-Bundle 'christoomey/vim-tmux-navigator'

@@ -5,7 +5,26 @@
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="agnoster"
+ZSH_THEME="powerlevel9k/powerlevel9k"
+
+# PowerLevel9k Theme {
+  DEFAULT_USER=jesus
+  POWERLEVEL9K_MODE='awesome-fontconfig'
+  POWERLEVEL9K_STATUS_VERBOSE=false
+
+  POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='027'
+  POWERLEVEL9K_DIR_HOME_BACKGROUND='027'
+  POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='027'
+  POWERLEVEL9K_VCS_CLEAN_BACKGROUND='046'
+  POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='051'
+  POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='226'
+
+  POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(tatus load ram)
+# }
+
+# Tmux {
+  ZSH_TMUX_AUTOSTART=true
+# }
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -49,7 +68,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(gitfast git-extras autojump bgnotify bower bundler capistrano catimg colored-man-pages colorize command-not-found composer common-aliases debian dircycle dirhistory encode64 extract fancy-ctrl-z fasd frontend-search gem jsontools npm pass phing rails redis-cli sudo symfony2 urltools vagrant web-search wd docker docker-compose)
+plugins=(gitfast git-extras autojump bgnotify bower bundler capistrano catimg colored-man-pages colorize command-not-found composer common-aliases debian dircycle dirhistory encode64 extract fancy-ctrl-z fasd frontend-search gem jsontools npm pass phing rails redis-cli sudo symfony2 urltools vagrant web-search wd docker docker-compose tmux tmuxinator)
 
 # User configuration
 
@@ -88,5 +107,7 @@ eval "$(rbenv init -)"
 alias wallsync='rsync ~/.config/variety/Favorites/* /media/jesus/Data/Users/JArna/Pictures/Wallpapers'
 alias docker-rm='docker ps -aq | xargs docker rm'
 alias docker-rmi='docker images -q | xargs docker rm'
-alias tm='tmux attach'
+
+alias tm='tmuxinator'
+alias tmm='tmuxinator misc'
 alias gbdm='git branch --no-color --merged | command grep -vE "^(\*|\s*master\s*$|\s*develop\s*$)" | command xargs -n 1 git branch -d'
