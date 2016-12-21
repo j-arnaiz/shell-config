@@ -10,7 +10,7 @@ rm -fR fonts
 git clone https://github.com/gabrielelana/awesome-terminal-fonts
 cp awesome-terminal-fonts/build/* ~/.fonts/
 fc-cache -fv ~/.fonts
-[[ ! -d ~/.config/fontconfig/conf.d ]] && mkdir -p ~/.config/fontconfig/conf.d
+[ ! -d ~/.config/fontconfig/conf.d ] && mkdir -p ~/.config/fontconfig/conf.d
 cp awesome-terminal-fonts/config/10-symbols.conf ~/.config/fontconfig/conf.d
 rm -fR awesome-terminal-fonts
 
