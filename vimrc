@@ -95,18 +95,6 @@ command! -bang Q q<bang>
 command! -bang QA qa<bang>
 command! -bang Qa qa<bang>
 
-" NerdTree {
-  :map! <F4> <C-c>:NERDTreeToggle<CR>:NERDTreeMirror<CR>
-  :map <F4> <C-c>:NERDTreeToggle<CR>:NERDTreeMirror<CR>
-  nmap <leader>tf :NERDTreeFind<CR>
-
-  let NERDTreeShowBookmarks=1
-  let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git$', '\.hg', '\.svn', '\.bzr']
-  let NERDTreeQuitOnOpen=1
-  let NERDTreeKeepTreeInNewTab=1
-  let g:nerdtree_tabs_open_on_gui_startup=0
-" }
-
 " ctrlp {
   let g:ctrlp_working_path_mode = 'ra'
   nnoremap <silent> <D-t> :CtrlP<CR>
@@ -131,7 +119,7 @@ command! -bang Qa qa<bang>
   let g:syntastic_svn_checkers = ['language_check']
   let g:syntastic_yaml_checkers = ['pyyaml']
   let g:syntastic_javascript_checkers = ['eslint']
-  " let g:syntastic_javascript_eslint_exec = '/route/to/eslint'
+  let g:syntastic_javascript_eslint_exec = '/home/jesus/Workspace/samyroad/admin-web/node_modules/.bin/eslint'
   " let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
   " let g:syntastic_php_phpcs_exec = '/route/to/phpcs'
   " let g:syntastic_php_phpcs_args = '--standard=/route/to/coding-standard --report=csv'
@@ -213,6 +201,19 @@ command! -bang Qa qa<bang>
   nmap <Leader>n <plug>EasyClipSwapPasteForward
   nmap <Leader>p <plug>EasyClipSwapPasteBackwards
 " }
+
+" NerdTree {
+  :map! <F4> <C-c>:NERDTreeToggle<CR>:NERDTreeMirror<CR>
+  :map <F4> <C-c>:NERDTreeToggle<CR>:NERDTreeMirror<CR>
+  nmap <leader>tf :NERDTreeFind<CR>
+
+  let NERDTreeShowBookmarks=1
+  let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git$', '\.hg', '\.svn', '\.bzr']
+  let NERDTreeQuitOnOpen=1
+  let NERDTreeKeepTreeInNewTab=1
+  let g:nerdtree_tabs_open_on_gui_startup=0
+" }
+
 
 " Ack {
   if executable('ag')
@@ -331,10 +332,10 @@ command! -bang Qa qa<bang>
 
   " Ctrl-E move to end of line in insert mode
   imap <C-e> A
-  " L move to end of line in normal mode
-  nmap L $
-  " L move to end of line in visual mode
-  vmap L $
+  " <Leader>l move to end of line
+  noremap <Leader>l $
+  " <Leader>h move to first non blank char of line
+  noremap <Leader>h ^
 
   " Jump to tag
   map <Leader>t 

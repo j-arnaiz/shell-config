@@ -19,7 +19,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
   POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='051'
   POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='226'
 
-  POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(tatus load ram)
+  POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status load ram)
 # }
 
 # Tmux {
@@ -111,3 +111,4 @@ alias docker-rmi='docker images -q | xargs docker rm'
 alias tm='tmuxinator'
 alias tmm='tmuxinator misc'
 alias gbdm='git branch --no-color --merged | command grep -vE "^(\*|\s*master\s*$|\s*develop\s*$)" | command xargs -n 1 git branch -d'
+alias dist-upgrade='sudo apt-get update && sudo apt-get dist-upgrade -y && sudo apt-get clean -y'

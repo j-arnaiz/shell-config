@@ -13,6 +13,10 @@ Bundle 'gmarik/vundle'
 " Vim color theme
 Bundle 'tomasr/molokai'
 
+" EasyClip for easy clipboard manage
+Bundle 'tpope/vim-repeat'
+Bundle 'svermeulen/vim-easyclip'
+
 " Nerdtree, file explorer
 Bundle 'scrooloose/nerdtree'
 
@@ -68,10 +72,6 @@ Bundle 'christoomey/vim-tmux-navigator'
 
 " Universal config for editors
 Bundle 'editorconfig/editorconfig-vim'
-
-" EasyClip for easy clipboard manage
-Bundle 'tpope/vim-repeat'
-Bundle 'svermeulen/vim-easyclip'
 
 Bundle 'mxw/vim-jsx'
 Bundle 'pangloss/vim-javascript'
