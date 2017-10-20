@@ -27,7 +27,7 @@ Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-surround'
 
 " Ctrlp file/buffer finder
-Bundle 'kien/ctrlp.vim'
+Bundle 'ctrlpvim/ctrlp.vim'
 
 " Vim multiple cursors with C-n
 Bundle 'terryma/vim-multiple-cursors'

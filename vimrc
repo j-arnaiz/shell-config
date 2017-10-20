@@ -310,7 +310,7 @@ command! -bang Qa qa<bang>
   map zh zH
 
   " Auto indent all file
-  map <F7> mzgg=G`z<CR>
+  map <F7> gg=G<CR>
 
   " Show open buffers
   :nnoremap <F5> :buffers<CR>:buffer<Space>
@@ -356,5 +356,9 @@ command! -bang Qa qa<bang>
 
   " Convert windows files into unix files
   nmap <Leader>d :call Dos2unix()<CR>
+
+  " User jk to esc from insert mode
+  imap jk <Esc>
+ 
 "}
 

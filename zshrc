@@ -106,9 +106,19 @@ export ANSIBLE_NOCOWS=1
 eval "$(rbenv init -)"
 alias wallsync='rsync ~/.config/variety/Favorites/* /media/jesus/Data/Users/JArna/Pictures/Wallpapers'
 alias docker-rm='docker ps -aq | xargs docker rm'
-alias docker-rmi='docker images -q | xargs docker rm'
+alias docker-rmi='docker images -q | xargs docker rmi -f'
+alias docker-rmn='docker network ls -q | xargs docker network rm'
+alias docker-rmv='docker volume ls -q | xargs docker volume rm'
+function docker-rma() {
+  docker-rm
+  docker-rmi
+  docker-rmn
+  docker-rmv
+}
 
 alias tm='tmuxinator'
 alias tmm='tmuxinator misc'
 alias gbdm='git branch --no-color --merged | command grep -vE "^(\*|\s*master\s*$|\s*develop\s*$)" | command xargs -n 1 git branch -d'
 alias dist-upgrade='sudo apt-get update && sudo apt-get dist-upgrade -y && sudo apt-get clean -y'
+unalias ag
+export ANSIBLE_VAULT_PASSWORD_FILE=~/.vault_pass
