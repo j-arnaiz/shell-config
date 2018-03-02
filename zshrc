@@ -120,5 +120,11 @@ alias tm='tmuxinator'
 alias tmm='tmuxinator misc'
 alias gbdm='git branch --no-color --merged | command grep -vE "^(\*|\s*master\s*$|\s*develop\s*$)" | command xargs -n 1 git branch -d'
 alias dist-upgrade='sudo apt-get update && sudo apt-get dist-upgrade -y && sudo apt-get clean -y'
-unalias ag
+# unalias ag
 export ANSIBLE_VAULT_PASSWORD_FILE=~/.vault_pass
+
+function docker-exec() {
+  local container=`grep -o -e '\w*-app' docker-compose.yml`
+  docker exec -it ${container} ${@:1}
+}
+alias de='docker-exec'
