@@ -197,6 +197,7 @@ command! -bang Qa qa<bang>
   let g:EasyClipUseSubstituteDefaults = 1
   let g:EasyClipUseCutDefaults = 1
   let g:EasyClipUsePasteToggleDefaults = 0
+  nmap M <Plug>MoveMotionEndOfLinePlug
 
   nmap <Leader>n <plug>EasyClipSwapPasteForward
   nmap <Leader>p <plug>EasyClipSwapPasteBackwards
@@ -230,6 +231,13 @@ command! -bang Qa qa<bang>
 
 " JSX {
    let g:jsx_ext_required = 0
+" }
+
+" Indent Guides {
+  let indent_guides_auto_colors = 0
+  autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=darkgrey ctermbg=233
+  autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=darkgrey ctermbg=232
+  let g:indent_guides_enable_on_vim_startup = 1
 " }
 
 " Init directories {
@@ -361,4 +369,3 @@ command! -bang Qa qa<bang>
   imap jk <Esc>
  
 "}
-
