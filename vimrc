@@ -7,7 +7,6 @@ if &term =~ '256color'
   set t_ut=
 endif
 
-
 set background=dark     " Assume a dark background
 
 " Leader key is used on multiple maps
@@ -19,7 +18,6 @@ source ~/.vimrc.bundles
 filetype plugin indent on   " Automatically detect file types.
 syntax enable
 scriptencoding utf-8
-set background=dark
 
 " Color configuration
 try

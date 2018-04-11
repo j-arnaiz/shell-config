@@ -105,7 +105,7 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 export ANSIBLE_NOCOWS=1
 eval "$(rbenv init -)"
 alias wallsync='rsync ~/.config/variety/Favorites/* /media/jesus/Data/Users/JArna/Pictures/Wallpapers'
-alias docker-rm='docker ps -aq | xargs docker rm'
+alias docker-rm='docker ps -aq | xargs docker rm -f'
 alias docker-rmi='docker images -q | xargs docker rmi -f'
 alias docker-rmn='docker network ls -q | xargs docker network rm'
 alias docker-rmv='docker volume ls -q | xargs docker volume rm'
