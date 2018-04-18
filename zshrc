@@ -124,7 +124,7 @@ alias dist-upgrade='sudo apt-get update && sudo apt-get dist-upgrade -y && sudo 
 export ANSIBLE_VAULT_PASSWORD_FILE=~/.vault_pass
 
 function docker-exec() {
-  local container=`grep -o -e '\w*-app' docker-compose.yml`
+  local container=`grep -o -e '[a-zA-Z\-]*-app' docker-compose.yml`
   docker exec -it ${container} ${@:1}
 }
 alias de='docker-exec'
