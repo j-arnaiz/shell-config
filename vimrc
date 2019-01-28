@@ -48,8 +48,8 @@ set laststatus=2
   set statusline+=\ [%{&ff}/%Y]                " Filetype
   set statusline+=\ [%{getcwd()}]              " Current dir
   set statusline+=%=%-14.(%l,%c%V%)\ %p%%      " Right aligned file nav info
-  set statusline+=%#warningmsg#                " Syntastic status warnings
-  set statusline+=%{SyntasticStatuslineFlag()} " Syntastic status warnings
+  " set statusline+=%#warningmsg#                " Syntastic status warnings
+  " set statusline+=%{SyntasticStatuslineFlag()} " Syntastic status warnings
   set statusline+=%*
 "}
 
@@ -110,22 +110,22 @@ command! -bang Qa qa<bang>
 "}
 
 " Syntastic {
-  let g:syntastic_aggregate_errors = 1
-  let g:syntastic_check_on_open = 1
-  let g:syntastic_check_on_wq = 0
-  let g:syntastic_gitcommit_checkers = ['language_check']
-  let g:syntastic_svn_checkers = ['language_check']
-  let g:syntastic_yaml_checkers = ['pyyaml']
-  let g:syntastic_javascript_checkers = ['eslint']
-  let g:syntastic_javascript_eslint_exec = '/home/jesus/Workspace/samyroad/admin-web/node_modules/.bin/eslint'
-  " let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
-  " let g:syntastic_php_phpcs_exec = '/route/to/phpcs'
-  " let g:syntastic_php_phpcs_args = '--standard=/route/to/coding-standard --report=csv'
-  " let g:syntastic_php_phpmd_exec = '/route/to/phpmd'
-  " let g:syntastic_php_phpmd_post_args = '/route/to/.phpmd.xml'
-  let g:syntastic_error_symbol = "✗"
-  let g:syntastic_warning_symbol = "⚠"
-  let g:syntastic_ruby_checkers = ['mri', 'rubocop']
+  " let g:syntastic_aggregate_errors = 1
+  " let g:syntastic_check_on_open = 1
+  " let g:syntastic_check_on_wq = 0
+  " let g:syntastic_gitcommit_checkers = ['language_check']
+  " let g:syntastic_svn_checkers = ['language_check']
+  " let g:syntastic_yaml_checkers = ['pyyaml']
+  " let g:syntastic_javascript_checkers = ['eslint']
+  " let g:syntastic_javascript_eslint_exec = '/home/jesus/Workspace/samyroad/admin-web/node_modules/.bin/eslint'
+  " " let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
+  " " let g:syntastic_php_phpcs_exec = '/route/to/phpcs'
+  " " let g:syntastic_php_phpcs_args = '--standard=/route/to/coding-standard --report=csv'
+  " " let g:syntastic_php_phpmd_exec = '/route/to/phpmd'
+  " " let g:syntastic_php_phpmd_post_args = '/route/to/.phpmd.xml'
+  " let g:syntastic_error_symbol = "✗"
+  " let g:syntastic_warning_symbol = "⚠"
+  " let g:syntastic_ruby_checkers = ['mri', 'rubocop']
 " }
 
 " Fugitive {
@@ -352,6 +352,9 @@ command! -bang Qa qa<bang>
 
   " Transform json to readable json
   nmap <Leader>j :%!python -m json.tool<CR>
+
+  " Open ansible vault
+  nmap <Leader>v :!ansible-vault edit %<CR>
 
   " Octave mappings (octave is for math operations)
   nmap ,o :.!octave --silent 2> /dev/null \| head -n1 \| cut -c8-<CR>

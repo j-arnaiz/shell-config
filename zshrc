@@ -128,3 +128,4 @@ function docker-exec() {
   docker exec -it ${container} ${@:1}
 }
 alias de='docker-exec'
+alias dup='docker-compose up -d'
