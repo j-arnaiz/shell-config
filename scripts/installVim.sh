@@ -5,7 +5,7 @@ cd ${SCRIPT_DIR}/..
 if [ "$[$(date +%s) - $(stat -c %Z /var/lib/apt/periodic/update-success-stamp)]" -ge 600000 ]; then
     sudo apt-get update
 fi
-sudo apt-get install git autojump silversearcher-ag vim-gtk build-essential cmake python-dev python3-dev
+sudo apt-get install git autojump silversearcher-ag vim-gtk3 build-essential cmake python-dev python3-dev
 
 # Installing dot files
 files=("vimrc" "vimrc.bundles")

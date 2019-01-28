@@ -2,3 +2,4 @@
 .DS_Store
 .php.tags
 *.sql
+*.tar.gz
