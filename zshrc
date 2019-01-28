@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block, everything else may go below.
+# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+# fi
+
 # Path to your oh-my-zsh installation.
   export ZSH=/home/jesus/.oh-my-zsh
 
@@ -5,22 +12,7 @@
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="powerlevel9k/powerlevel9k"
-
-# PowerLevel9k Theme {
-  DEFAULT_USER=jesus
-  POWERLEVEL9K_MODE='awesome-fontconfig'
-  POWERLEVEL9K_STATUS_VERBOSE=false
-
-  POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='027'
-  POWERLEVEL9K_DIR_HOME_BACKGROUND='027'
-  POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='027'
-  POWERLEVEL9K_VCS_CLEAN_BACKGROUND='046'
-  POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='051'
-  POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='226'
-
-  POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status load ram)
-# }
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Tmux {
   ZSH_TMUX_AUTOSTART=true
@@ -68,7 +60,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(gitfast git-extras autojump bgnotify bower bundler capistrano catimg colored-man-pages colorize command-not-found composer common-aliases debian dircycle dirhistory encode64 extract fancy-ctrl-z fasd frontend-search gem jsontools npm pass phing rails redis-cli sudo symfony2 urltools vagrant web-search wd docker docker-compose tmux tmuxinator)
+plugins=(git gitfast git-extras autojump bgnotify bower bundler capistrano catimg colored-man-pages colorize command-not-found composer common-aliases debian dircycle dirhistory encode64 extract fancy-ctrl-z fasd frontend-search gem jsontools npm pass phing rails redis-cli sudo symfony2 urltools vagrant web-search wd docker docker-compose tmux tmuxinator)
 
 # User configuration
 
@@ -101,7 +93,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # eval $(thefuck --alias)
-export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH=":$HOME/.rbenv/bin:$PATH"
 export ANSIBLE_NOCOWS=1
 eval "$(rbenv init -)"
 alias wallsync='rsync ~/.config/variety/Favorites/* /media/jesus/Data/Users/JArna/Pictures/Wallpapers'
@@ -124,7 +116,14 @@ alias dist-upgrade='sudo apt-get update && sudo apt-get dist-upgrade -y && sudo 
 export ANSIBLE_VAULT_PASSWORD_FILE=~/.vault_pass
 
 function docker-exec() {
-  local container=`grep -o -e '[a-zA-Z\-]*-app' docker-compose.yml`
+  local container=`grep 'container_name' docker-compose.yml | grep -o -e '[a-zA-Z\-]*-app'`
   docker exec -it ${container} ${@:1}
 }
 alias de='docker-exec'
+alias dup='docker-compose up -d'
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

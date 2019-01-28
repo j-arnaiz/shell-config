@@ -9,13 +9,11 @@
 [color]
   ui = always
 [user]
-  name = %name%
-  mail = %email%
-  email = %email%
-[push]
+ [push]
+   default = current
+l[pull]
   default = current
-[pull]
-  default = current
+  rebase = true
 [core]
   editor = vim
   excludesfile = ~/.gitignore

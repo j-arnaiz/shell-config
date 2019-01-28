@@ -1,5 +1,5 @@
 #!/bin/bash
-rubyVersion=2.3.1
+rubyVersion=2.6.3
 
 set -e
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
@@ -7,14 +7,6 @@ cd ${SCRIPT_DIR}/..
 
 if [[ ! -d ~/.rbenv ]]; then
     git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
-fi
-
-if [[ -f ~/.zshrc ]]; then
-    echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc
-    echo 'eval "$(rbenv init -)"' >> ~/.zshrc
-else
-    echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
-    echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 fi
 
 if [[ ! -d ~/.rbenv/plugins/ruby-build ]]; then

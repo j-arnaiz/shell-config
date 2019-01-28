@@ -6,11 +6,11 @@ cd ${SCRIPT_DIR}/..
 if [ "$[$(date +%s) - $(stat -c %Z /var/lib/apt/periodic/update-success-stamp)]" -ge 600000 ]; then
     sudo apt-get update
 fi
-sudo apt-get install git tmux zsh tmuxinator
+sudo apt-get install git tmux zsh tmuxinator autojump
 
 [ ! -d ~/.oh-my-zsh ] && sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
-[ ! -d ~/.oh-my-zsh/custom/themes/powerlevel9k ] && git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+[ ! -d ~/.oh-my-zsh/custom/themes/powerlevel10k ] && git clone https://github.com/romkatv/powerlevel10k ~/.oh-my-zsh/custom/themes/powerlevel10k
 
 # Installing dot files
 files=("bash_aliases" "bash_profile" "bash_colors" "bashrc" "gitconfig" "tmux.conf" "gitignore" "zshrc")

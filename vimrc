@@ -42,15 +42,15 @@ set cursorline                           " Highlight current line
 set laststatus=2
 
 " Status line config {
-  set statusline=%<%f\                         " Filename
-  set statusline+=%w%h%m%r                     " Options
-  set statusline+=%{fugitive#statusline()}     " Git Hotness
-  set statusline+=\ [%{&ff}/%Y]                " Filetype
-  set statusline+=\ [%{getcwd()}]              " Current dir
-  set statusline+=%=%-14.(%l,%c%V%)\ %p%%      " Right aligned file nav info
-  set statusline+=%#warningmsg#                " Syntastic status warnings
-  set statusline+=%{SyntasticStatuslineFlag()} " Syntastic status warnings
-  set statusline+=%*
+  "set statusline=%<%f\                         " Filename
+  "set statusline+=%w%h%m%r                     " Options
+  "set statusline+=%{fugitive#statusline()}     " Git Hotness
+  "set statusline+=\ [%{&ff}/%Y]                " Filetype
+  "set statusline+=\ [%{getcwd()}]              " Current dir
+  "set statusline+=%=%-14.(%l,%c%V%)\ %p%%      " Right aligned file nav info
+  " set statusline+=%#warningmsg#                " Syntastic status warnings
+  " set statusline+=%{SyntasticStatuslineFlag()} " Syntastic status warnings
+  "set statusline+=%*
 "}
 
 set backspace=indent,eol,start  " Backspace for dummies
@@ -94,38 +94,38 @@ command! -bang QA qa<bang>
 command! -bang Qa qa<bang>
 
 " ctrlp {
-  let g:ctrlp_working_path_mode = 'ra'
-  nnoremap <silent> <D-t> :CtrlP<CR>
-  nnoremap <silent> <D-r> :CtrlPMRU<CR>
-  let g:ctrlp_custom_ignore = {
-        \ 'dir':  '\.git$\|\.hg$\|\.svn$',
-        \ 'file': '\.exe$\|\.so$\|\.dll$\|\.pyc$' }
-  let g:ctrlp_user_command = {
-        \ 'types': {
-        \ 1: ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others'],
-        \ 2: ['.hg', 'hg --cwd %s locate -I .'],
-        \ },
-        \ 'fallback': 'find %s -type f'
-        \ }
+  "let g:ctrlp_working_path_mode = 'ra'
+  "nnoremap <silent> <D-t> :CtrlP<CR>
+  "nnoremap <silent> <D-r> :CtrlPMRU<CR>
+  "let g:ctrlp_custom_ignore = {
+  "      \ 'dir':  '\.git$\|\.hg$\|\.svn$',
+  "      \ 'file': '\.exe$\|\.so$\|\.dll$\|\.pyc$' }
+  "let g:ctrlp_user_command = {
+  "      \ 'types': {
+  "      \ 1: ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others'],
+  "      \ 2: ['.hg', 'hg --cwd %s locate -I .'],
+  "      \ },
+  "      \ 'fallback': 'find %s -type f'
+  "      \ }
 "}
 
 " Syntastic {
-  let g:syntastic_aggregate_errors = 1
-  let g:syntastic_check_on_open = 1
-  let g:syntastic_check_on_wq = 0
-  let g:syntastic_gitcommit_checkers = ['language_check']
-  let g:syntastic_svn_checkers = ['language_check']
-  let g:syntastic_yaml_checkers = ['pyyaml']
-  let g:syntastic_javascript_checkers = ['eslint']
-  let g:syntastic_javascript_eslint_exec = '/home/jesus/Workspace/samyroad/admin-web/node_modules/.bin/eslint'
-  " let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
-  " let g:syntastic_php_phpcs_exec = '/route/to/phpcs'
-  " let g:syntastic_php_phpcs_args = '--standard=/route/to/coding-standard --report=csv'
-  " let g:syntastic_php_phpmd_exec = '/route/to/phpmd'
-  " let g:syntastic_php_phpmd_post_args = '/route/to/.phpmd.xml'
-  let g:syntastic_error_symbol = "✗"
-  let g:syntastic_warning_symbol = "⚠"
-  let g:syntastic_ruby_checkers = ['mri', 'rubocop']
+  " let g:syntastic_aggregate_errors = 1
+  " let g:syntastic_check_on_open = 1
+  " let g:syntastic_check_on_wq = 0
+  " let g:syntastic_gitcommit_checkers = ['language_check']
+  " let g:syntastic_svn_checkers = ['language_check']
+  " let g:syntastic_yaml_checkers = ['pyyaml']
+  " let g:syntastic_javascript_checkers = ['eslint']
+  " let g:syntastic_javascript_eslint_exec = '/home/jesus/Workspace/samyroad/admin-web/node_modules/.bin/eslint'
+  " " let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
+  " " let g:syntastic_php_phpcs_exec = '/route/to/phpcs'
+  " " let g:syntastic_php_phpcs_args = '--standard=/route/to/coding-standard --report=csv'
+  " " let g:syntastic_php_phpmd_exec = '/route/to/phpmd'
+  " " let g:syntastic_php_phpmd_post_args = '/route/to/.phpmd.xml'
+  " let g:syntastic_error_symbol = "✗"
+  " let g:syntastic_warning_symbol = "⚠"
+  " let g:syntastic_ruby_checkers = ['mri', 'rubocop']
 " }
 
 " Fugitive {
@@ -168,24 +168,24 @@ command! -bang Qa qa<bang>
 "}
 
 " Airline {
-  let g:airline_theme = 'molokai' " 'powerlineish' is another choice
-  let g:airline_powerline_fonts=1
-  let g:airline#extensions#tabline#enabled = 1
+  " let g:airline_theme = 'molokai' " 'powerlineish' is another choice
+  " let g:airline_powerline_fonts=1
+  " let g:airline#extensions#tabline#enabled = 1
 " }
 
 " YouCompleteMe {
-  let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-  let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+  " let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+  " let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 " }
 
 " UltiSnips {
-  let g:UltiSnipsExpandTrigger = "<tab>"
-  let g:UltiSnipsJumpForwardTrigger = "<tab>"
-  let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+  " let g:UltiSnipsExpandTrigger = "<tab>"
+  " let g:UltiSnipsJumpForwardTrigger = "<tab>"
+  " let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 " }
 
 " Super tab {
-  let g:SuperTabDefaultCompletionType = '<C-n>'
+  " let g:SuperTabDefaultCompletionType = '<C-n>'
 " }
 
 " EasyClip {
@@ -221,14 +221,14 @@ command! -bang Qa qa<bang>
 " }
 
 " LaTex {
-   let g:tex_nine_config = {
-    \'compiler': 'pdflatex',
-    \'leader': ','
-    \}
-" }
+   " let g:tex_nine_config = {
+   "  \'compiler': 'pdflatex',
+   "  \'leader': ','
+   "  \}
+" }" 
 
 " JSX {
-   let g:jsx_ext_required = 0
+   " let g:jsx_ext_required = 0
 " }
 
 " Indent Guides {
@@ -353,9 +353,12 @@ command! -bang Qa qa<bang>
   " Transform json to readable json
   nmap <Leader>j :%!python -m json.tool<CR>
 
+  " Open ansible vault
+  nmap <Leader>v :!ansible-vault edit %<CR>
+
   " Octave mappings (octave is for math operations)
-  nmap ,o :.!octave --silent 2> /dev/null \| head -n1 \| cut -c8-<CR>
-  vmap ,o :!octave --silent 2> /dev/null \| head -n1 \| cut -c8-<CR>
+  " nmap ,o :.!octave --silent 2> /dev/null \| head -n1 \| cut -c8-<CR>
+  " vmap ,o :!octave --silent 2> /dev/null \| head -n1 \| cut -c8-<CR>
 
   " Search for selected text, forwards or backwards.
   vnoremap // y/<C-R>"<CR>
@@ -365,5 +368,4 @@ command! -bang Qa qa<bang>
 
   " User jk to esc from insert mode
   imap jk <Esc>
- 
 "}

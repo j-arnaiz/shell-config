@@ -5,73 +5,90 @@ set background=dark     " Assume a dark background
 filetype off
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
-" Bundles {
+" Plugins {
 
-" Vim Bundles manager
-Bundle 'gmarik/vundle'
+" Vim Plugins manager
+Plugin 'gmarik/vundle'
 
 " Vim color theme
-Bundle 'tomasr/molokai'
+Plugin 'tomasr/molokai'
 
 " EasyClip for easy clipboard manage
-Bundle 'tpope/vim-repeat'
-Bundle 'svermeulen/vim-easyclip'
+Plugin 'tpope/vim-repeat'
+Plugin 'svermeulen/vim-easyclip'
+
+" auto close [({
+Plugin 'jiangmiao/auto-pairs'
 
 " Nerdtree, file explorer
-Bundle 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdtree'
 
 " Comment Uncomment lines
-Bundle 'tpope/vim-commentary'
+" Plugin 'tpope/vim-commentary'
+Plugin 'preservim/nerdcommenter'
 
 " Vim surround, try cs'" 
-Bundle 'tpope/vim-surround'
+Plugin 'tpope/vim-surround'
 
 " Ctrlp file/buffer finder
-Bundle 'ctrlpvim/ctrlp.vim'
+" Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
 
 " Vim multiple cursors with C-n
-Bundle 'terryma/vim-multiple-cursors'
+Plugin 'terryma/vim-multiple-cursors'
+
+" Make ([{ colorful
+Plugin 'frazrepo/vim-rainbow'
 
 " Powerful vim command bar
-Bundle 'bling/vim-airline'
-Bundle 'vim-airline/vim-airline-themes'
+" Plugin 'bling/vim-airline'
+" Plugin 'vim-airline/vim-airline-themes'
+Plugin 'itchyny/lightline.vim'
 
 " Undo tree
-Bundle 'mbbill/undotree'
+Plugin 'mbbill/undotree'
 
 " indent colored lines
-Bundle 'nathanaelkane/vim-indent-guides'
+Plugin 'nathanaelkane/vim-indent-guides'
 
 " Marks added / removed lines
-Bundle 'mhinz/vim-signify'
+" Plugin 'mhinz/vim-signify'
+Plugin 'airblade/vim-gitgutter'
 
 " Syntax check in vim
-Bundle 'scrooloose/syntastic'
-Bundle 'myint/syntastic-extras'
+" Plugin 'scrooloose/syntastic'
+" Plugin 'myint/syntastic-extras'
+Plugin 'dense-analysis/ale'
 
 " Vim git plugin
-Bundle 'tpope/vim-fugitive'
+Plugin 'tpope/vim-fugitive'
 
 " Tabular makes align tab by regex
-Bundle 'godlygeek/tabular'
+Plugin 'godlygeek/tabular'
 
 " Easy motion <leader><leader>motion :)
-Bundle 'Lokaltog/vim-easymotion'
+Plugin 'Lokaltog/vim-easymotion'
 
 " Snippets and autocomplete
-Bundle 'SirVer/ultisnips'
-Bundle 'honza/vim-snippets'
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'ervandew/supertab'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+Plugin 'ajh17/VimCompletesMe'
+Plugin 'natebosch/vim-lsc'
+" Plugin 'Valloric/YouCompleteMe'
+" Plugin 'ervandew/supertab'
+Plugin 'mattn/emmet-vim'
 
 " Code searching tool
-Bundle 'mileszs/ack.vim'
+Plugin 'mileszs/ack.vim'
 
 " Tmux - vim integration
-Bundle 'christoomey/vim-tmux-navigator'
+Plugin 'christoomey/vim-tmux-navigator'
 
 " Universal config for editors
-Bundle 'editorconfig/editorconfig-vim'
+Plugin 'editorconfig/editorconfig-vim'
 
-Bundle 'mxw/vim-jsx'
-Bundle 'pangloss/vim-javascript'
+" Plugin 'mxw/vim-jsx'
+" Plugin 'pangloss/vim-javascript'
+" Plugin 'tpope/vim-eunuch'
+
