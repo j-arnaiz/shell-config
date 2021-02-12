@@ -2,13 +2,13 @@ set nocompatible        " Must be first line
 set background=dark     " Assume a dark background
 
 " The next three lines ensure that the ~/.vim/bundle/ system works
-filetype off
-set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
-" Plugins {
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-" Vim Plugins manager
-Plugin 'gmarik/vundle'
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" Plugins {
 
 " Vim color theme
 Plugin 'tomasr/molokai'
@@ -18,10 +18,11 @@ Plugin 'tpope/vim-repeat'
 Plugin 'svermeulen/vim-easyclip'
 
 " auto close [({
-Plugin 'jiangmiao/auto-pairs'
+" Plugin 'jiangmiao/auto-pairs'
 
 " Nerdtree, file explorer
-Plugin 'scrooloose/nerdtree'
+" Plugin 'scrooloose/nerdtree'
+Plugin 'preservim/nerdtree'
 
 " Comment Uncomment lines
 " Plugin 'tpope/vim-commentary'
@@ -59,7 +60,7 @@ Plugin 'airblade/vim-gitgutter'
 " Syntax check in vim
 " Plugin 'scrooloose/syntastic'
 " Plugin 'myint/syntastic-extras'
-Plugin 'dense-analysis/ale'
+" Plugin 'dense-analysis/ale'
 
 " Vim git plugin
 Plugin 'tpope/vim-fugitive'
@@ -73,14 +74,14 @@ Plugin 'Lokaltog/vim-easymotion'
 " Snippets and autocomplete
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-Plugin 'ajh17/VimCompletesMe'
-Plugin 'natebosch/vim-lsc'
+" Plugin 'ajh17/VimCompletesMe'
+" Plugin 'natebosch/vim-lsc'
 " Plugin 'Valloric/YouCompleteMe'
-" Plugin 'ervandew/supertab'
+Plugin 'ervandew/supertab'
 Plugin 'mattn/emmet-vim'
 
 " Code searching tool
-Plugin 'mileszs/ack.vim'
+" Plugin 'mileszs/ack.vim'
 
 " Tmux - vim integration
 Plugin 'christoomey/vim-tmux-navigator'
@@ -90,5 +91,7 @@ Plugin 'editorconfig/editorconfig-vim'
 
 " Plugin 'mxw/vim-jsx'
 " Plugin 'pangloss/vim-javascript'
-" Plugin 'tpope/vim-eunuch'
+" Plugin 'jparise/vim-graphql'
 
+Plugin 'neoclide/coc.nvim'
+call vundle#end()
