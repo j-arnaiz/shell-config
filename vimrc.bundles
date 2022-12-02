@@ -2,96 +2,95 @@ set nocompatible        " Must be first line
 set background=dark     " Assume a dark background
 
 " The next three lines ensure that the ~/.vim/bundle/ system works
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
 " let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+Plug 'VundleVim/Vundle.vim'
 
-" Plugins {
+" Plugs {
 
 " Vim color theme
-Plugin 'tomasr/molokai'
+Plug 'tomasr/molokai'
 
 " EasyClip for easy clipboard manage
-Plugin 'tpope/vim-repeat'
-Plugin 'svermeulen/vim-easyclip'
+Plug 'tpope/vim-repeat'
+Plug 'svermeulen/vim-easyclip'
 
 " auto close [({
-" Plugin 'jiangmiao/auto-pairs'
+" Plug 'jiangmiao/auto-pairs'
 
 " Nerdtree, file explorer
-" Plugin 'scrooloose/nerdtree'
-Plugin 'preservim/nerdtree'
+" Plug 'scrooloose/nerdtree'
+Plug 'preservim/nerdtree'
 
 " Comment Uncomment lines
-" Plugin 'tpope/vim-commentary'
-Plugin 'preservim/nerdcommenter'
+" Plug 'tpope/vim-commentary'
+Plug 'preservim/nerdcommenter'
 
 " Vim surround, try cs'" 
-Plugin 'tpope/vim-surround'
+Plug 'tpope/vim-surround'
 
 " Ctrlp file/buffer finder
-" Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'junegunn/fzf'
-Plugin 'junegunn/fzf.vim'
+" Plug 'ctrlpvim/ctrlp.vim'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
 
 " Vim multiple cursors with C-n
-Plugin 'terryma/vim-multiple-cursors'
+Plug 'terryma/vim-multiple-cursors'
 
 " Make ([{ colorful
-Plugin 'frazrepo/vim-rainbow'
+Plug 'frazrepo/vim-rainbow'
 
 " Powerful vim command bar
-" Plugin 'bling/vim-airline'
-" Plugin 'vim-airline/vim-airline-themes'
-Plugin 'itchyny/lightline.vim'
+" Plug 'bling/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
+Plug 'itchyny/lightline.vim'
 
 " Undo tree
-Plugin 'mbbill/undotree'
+Plug 'mbbill/undotree'
 
 " indent colored lines
-Plugin 'nathanaelkane/vim-indent-guides'
+Plug 'nathanaelkane/vim-indent-guides'
 
 " Marks added / removed lines
-" Plugin 'mhinz/vim-signify'
-Plugin 'airblade/vim-gitgutter'
+" Plug 'mhinz/vim-signify'
+Plug 'airblade/vim-gitgutter'
 
 " Syntax check in vim
-" Plugin 'scrooloose/syntastic'
-" Plugin 'myint/syntastic-extras'
-" Plugin 'dense-analysis/ale'
+" Plug 'scrooloose/syntastic'
+" Plug 'myint/syntastic-extras'
+" Plug 'dense-analysis/ale'
 
 " Vim git plugin
-Plugin 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 
 " Tabular makes align tab by regex
-Plugin 'godlygeek/tabular'
+Plug 'godlygeek/tabular'
 
 " Easy motion <leader><leader>motion :)
-Plugin 'Lokaltog/vim-easymotion'
+Plug 'Lokaltog/vim-easymotion'
 
 " Snippets and autocomplete
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
-" Plugin 'ajh17/VimCompletesMe'
-" Plugin 'natebosch/vim-lsc'
-" Plugin 'Valloric/YouCompleteMe'
-Plugin 'ervandew/supertab'
-Plugin 'mattn/emmet-vim'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+" Plug 'ajh17/VimCompletesMe'
+" Plug 'natebosch/vim-lsc'
+" Plug 'Valloric/YouCompleteMe'
+Plug 'ervandew/supertab'
+Plug 'mattn/emmet-vim'
 
 " Code searching tool
-" Plugin 'mileszs/ack.vim'
+" Plug 'mileszs/ack.vim'
 
 " Tmux - vim integration
-Plugin 'christoomey/vim-tmux-navigator'
+Plug 'christoomey/vim-tmux-navigator'
 
 " Universal config for editors
-Plugin 'editorconfig/editorconfig-vim'
+Plug 'editorconfig/editorconfig-vim'
 
-" Plugin 'mxw/vim-jsx'
-" Plugin 'pangloss/vim-javascript'
-" Plugin 'jparise/vim-graphql'
+" Plug 'mxw/vim-jsx'
+" Plug 'pangloss/vim-javascript'
+" Plug 'jparise/vim-graphql'
 
-Plugin 'neoclide/coc.nvim'
-call vundle#end()
+Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
+call plug#end()
